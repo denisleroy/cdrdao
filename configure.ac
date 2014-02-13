@@ -76,17 +76,17 @@ fi
 
 dnl Check for additionally required libraries
 
-AC_CHECK_FUNC(sched_getparam,AC_DEFINE(HAVE_SCHED_GETPARAM,1,""),
-  AC_CHECK_LIB(posix4,sched_getparam,[use_libposix4=yes;AC_DEFINE(HAVE_SCHED_GETPARAM)]))
+AC_CHECK_FUNC([sched_getparam],[AC_DEFINE(HAVE_SCHED_GETPARAM,1,"")],
+  [AC_CHECK_LIB([posix4],[sched_getparam],[use_libposix4=yes;AC_DEFINE(HAVE_SCHED_GETPARAM)])])
 
-AC_CHECK_FUNC(sched_get_priority_max,AC_DEFINE(HAVE_SCHED_GET_PRIORITY_MAX,1,""),
+AC_CHECK_FUNC([sched_get_priority_max],[AC_DEFINE(HAVE_SCHED_GET_PRIORITY_MAX,1,"")],
   AC_CHECK_LIB(posix4,sched_get_priority_max,[use_libposix4=yes;AC_DEFINE(HAVE_SCHED_GET_PRIORITY_MAX,1,"")]))
 
-AC_CHECK_FUNC(sched_setscheduler,AC_DEFINE(HAVE_SCHED_SETSCHEDULER,1,""),
-  AC_CHECK_LIB(posix4,sched_setscheduler,[use_libposix4=yes;AC_DEFINE(HAVE_SCHED_SETSCHEDULER,1,"")]))
+AC_CHECK_FUNC([sched_setscheduler],[AC_DEFINE(HAVE_SCHED_SETSCHEDULER,1,"")],
+  [AC_CHECK_LIB(posix4,sched_setscheduler,[use_libposix4=yes;AC_DEFINE(HAVE_SCHED_SETSCHEDULER,1,"")])])
 
-AC_CHECK_LIB(socket,socket,[use_libsocket=yes])
-AC_CHECK_LIB(socket,connect,[use_libsocket=yes])
+AC_CHECK_LIB([socket],[socket],[use_libsocket=yes])
+AC_CHECK_LIB([socket],[connect],[use_libsocket=yes])
 
 dnl Add 'libsocket' if required
 if test "$use_libsocket" = yes; then

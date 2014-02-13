@@ -116,15 +116,19 @@ int ScsiIf::init()
 
     if (impl_->fd_ < 0) {
 
-	if (errno == EACCES) {
+	if (errno == EACCES || errno == EBUSY) {
 	    impl_->fd_ = open(impl_->filename_, O_RDONLY | O_NONBLOCK);
 
 	    if (impl_->fd_ < 0) {
 		goto failed;
 	    }
 	    impl_->readOnlyMode = true;
-	    log_message(-1, "No permission to write to SCSI device."
-			"Only read commands are supported.");
+            if (errno == EACCES)
+                log_message(-1, "No permission to write to SCSI device. "
+                            "Only read commands are supported.");
+            if (errno == EBUSY)
+                log_message(-1, "SCSI device is currently in use. "
+                            "Only read commands are supported.");
 	} else {
 	    goto failed;
 	}
