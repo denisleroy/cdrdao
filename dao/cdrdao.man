@@ -340,7 +340,7 @@ disks, e.g. to create a CD-EXTRA.
 .TP
 .BI \--overburn
 By default cdrdao will not allow to write more data on a medium than
-specified by the current medium. This option allows to ignore this condition.
+specified by the current medium. This option allows one to ignore this condition.
 .TP
 .BI \--eject
 Eject the CD-R after writing or write simulation.
@@ -478,7 +478,7 @@ mode CD).
 .IP CD_ROM_XA
 The disc contains mode 2 form 1 or mode 2 form 2 tracks. Audio tracks
 are allowed, too. This type must be used if multi session disks are
-created (option --multi).
+created (option \-\-multi).
 .IP CD_TEXT\ {\ ...\ }
 Defines global CD-TEXT data like the album title and the used languages.
 See the CD-TEXT section below for the syntax of the CD-TEXT block contents.
@@ -552,7 +552,7 @@ set to 0 all audio data from <start> until the end of file is used.
 Audio files may have raw or WAVE format with 16 bits per sample, 44.1
 kHz sampling rate, stereo. Raw files must have the layout 'MSBLeft
 LSBLeft MSBRight LSBRight ...' (big endian byte order). WAVE files are
-expected to have little endian byte order. The option --swap reverses
+expected to have little endian byte order. The option \-\-swap reverses
 the expected byte order for all raw and WAVE files. Only filenames
 with a ".wav" ending are treated as WAVE files, all other names are
 assumed to be raw audio files. Use tools like sox(1) to convert other
@@ -829,9 +829,9 @@ and
 Corresponding option:
 .I --driver
 .IP write_speed
-Specifies writing speed. Corresponding option: --speed
+Specifies writing speed. Corresponding option: \-\-speed
 .IP write_buffers
-Specifies fifo buffers used for recording. Corresponding option: --buffers
+Specifies fifo buffers used for recording. Corresponding option: \-\-buffers
 .IP read_device
 Device used for operations
 .I read-toc, read-cd
