@@ -104,6 +104,7 @@ W|DELTA|OME-W141|generic-mmc
 W|GENERIC|CRD-BP1600P|generic-mmc
 W|GENERIC|CRD-R800S|generic-mmc
 W|GENERIC|CRD-RW2|generic-mmc
+W|HL-DT-ST|DVDRAM GSA-H42L|generic-mmc|OPT_MMC_CD_TEXT
 W|HL-DT-ST|RW/DVD GCC-4120B|generic-mmc|OPT_MMC_CD_TEXT
 W|HP|9510i|generic-mmc|OPT_MMC_CD_TEXT
 W|HP|CD-Writer+ 7570|generic-mmc|OPT_MMC_CD_TEXT

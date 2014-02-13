@@ -177,6 +177,7 @@ static DriverSelectTable BUILTIN_WRITE_DRIVER_TABLE[] = {
 { "generic-mmc", "GENERIC", "CRD-BP1600P", 0, NULL },
 { "generic-mmc", "GENERIC", "CRD-R800S", 0, NULL },
 { "generic-mmc", "GENERIC", "CRD-RW2", 0, NULL },
+{ "generic-mmc", "HL-DT-ST", "DVDRAM GSA-H42L", OPT_MMC_CD_TEXT, NULL },
 { "generic-mmc", "HL-DT-ST", "RW/DVD GCC-4120B", OPT_MMC_CD_TEXT, NULL },
 { "generic-mmc", "HP", "9510i", OPT_MMC_CD_TEXT, NULL },
 { "generic-mmc", "HP", "CD-Writer+ 7570", OPT_MMC_CD_TEXT, NULL },
