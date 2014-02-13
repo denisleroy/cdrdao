@@ -239,7 +239,7 @@ if test "$scglib" = yes; then
   scsilib_objs="ScsiIf-lib.o"
   
   case "$host" in
-    *-freebsd*)
+    *-freebsd* | *-kfreebsd*-gnu)
 			       scsilib_libs="$scsilib_libs -lcam"
 			       ;;
   esac
@@ -257,7 +257,7 @@ else
 	       scsilib_objs="ScsiIf-linux.o sg_err.o"
 	       ;;
     
-    *-freebsd*)
+    *-freebsd* | *-kfreebsd*-gnu)
 	       scsilib_libs="-lcam"
 	       scsilib_objs="ScsiIf-freebsd-cam.o"
 	       ;;
@@ -313,7 +313,7 @@ esac
 
 dnl Sound device selection for xcdrdao
 case "$host" in
-  *-linux* | *-freebsd* | *-solaris*)
+  *-linux* | *-freebsd* | *-kfreebsd*-gnu | *-solaris*)
 	     sound_if_obj=SoundIF-ao.o
 	     ;;
 

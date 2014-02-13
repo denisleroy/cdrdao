@@ -32,6 +32,7 @@
 
 #include "ScsiIf.h"
 #include "log.h"
+#include "util.h"
 
 #define DEF_RETRY_COUNT 1
 
