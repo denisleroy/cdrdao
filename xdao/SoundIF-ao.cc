@@ -22,6 +22,7 @@
 #include "SoundIF.h"
 #include "Sample.h"
 #include "util.h"
+#include <cstring>
 
 class SoundIFImpl
 {
@@ -37,10 +38,12 @@ SoundIF::SoundIF()
 
   impl_ = new SoundIFImpl;
   impl_->driverId = ao_default_driver_id();
+  memset(&(impl_->format), 0, sizeof (ao_sample_format));
   impl_->format.bits = 16;
   impl_->format.rate = 44100;
   impl_->format.channels = 2;
   impl_->format.byte_format = AO_FMT_NATIVE;  
+  impl_->format.matrix = NULL;
 }
 
 SoundIF::~SoundIF()
