@@ -12,3 +12,14 @@ trackdb/TocLexer*
 trackdb/TocParser*.h
 trackdb/TocParser*.cpp
 specs/*.spec
+config.h
+config.log
+config.status
+dao/cdrdao
+pccts/antlr/antlr
+pccts/dlg/dlg
+stamp-h1
+utils/cue2toc
+utils/toc2cddb
+utils/toc2cue
+xdao/gcdmaster.schemas
