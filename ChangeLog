@@ -3,6 +3,14 @@
 --------------------------------------------------------------------------
 
  o  Fixed compile issues with glibc >= 2.12
+ o  Gcdmaster segfault fix (Adrian Knoth)
+ o  Prevent a FTBFS on kfreebsd (Christoph Egger)
+ o  Also look in /etc/default/cdrdao config (Andrew Suffield)
+ o  Fix printf format security issues (Frantisek Kluknavsky Fedora)
+ o  Add missing options to man page (Honza Horák)
+ o  CD_TEXT fix for HL-DT-ST (Kees Cook)
+ o  Man page hyphen fixes (Markus Koschany)
+ o  Some updates to the old scsilib smake files (Ubuntu patches)
 
 --------------------------------------------------------------------------
   cdrdao 1.2.3 (2009-10-05)

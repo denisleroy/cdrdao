@@ -1,0 +1,14 @@
+Makefile.in
+aclocal.m4
+autom4te.cache/
+configure
+scsilib/
+*.o
+.deps/
+Makefile
+*.a
+*~
+trackdb/TocLexer*
+trackdb/TocParser*.h
+trackdb/TocParser*.cpp
+specs/*.spec
